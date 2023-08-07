@@ -6,11 +6,11 @@ import java.util.List;
 
 public class StringCompression {
     public static void main(String[] args) {
-        solution("aabbaccc");
+        System.out.println(solution("aabbaccc"));
     }
 
-    public static void solution(String s) {
-        List<String> resultList = new ArrayList<>();
+    public static int solution(String s) {
+        int answer = s.length();
         for(int i = 1; i <= s.length() / 2; i++) {
             StringBuilder result = new StringBuilder();
             int count = 1;
@@ -21,19 +21,17 @@ public class StringCompression {
 
                 if(baseString.equals(comparisonString))
                     count++;
-
                 else {
                     result.append((count > 1) ? count + baseString : baseString);
-
                     baseString = comparisonString;
                     count = 1;
                 }
             }
-            result.append(baseString);
 
-            resultList.add(result.toString());
+            result.append(baseString);
+            answer = Math.min(answer, result.toString().length());
         }
 
-        System.out.println(resultList);
+        return answer;
     }
 }
