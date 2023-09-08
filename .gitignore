@@ -34,3 +34,6 @@ bin/
 *.iml
 out
 gen
+
+### file ignore ###
+Test.java
