@@ -1,3 +1,6 @@
+### file ignore ###
+src/leveltwo/Test.java
+
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
@@ -34,6 +37,3 @@ bin/
 *.iml
 out
 gen
-
-### file ignore ###
-src/leveltwo/Test.java
