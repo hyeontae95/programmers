@@ -1,5 +1,5 @@
 ### file ignore ###
-src/leveltwo/Test.java
+!**/src/leveltwo/Test.java
 
 ### IntelliJ IDEA ###
 out/
